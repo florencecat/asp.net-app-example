@@ -1,0 +1,44 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    background-color: #d1f5e3;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.header {
+    background-color: #36D88A;
+}
+
+.navbar {
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #00733C;
+}
+
+footer {
+    background-color: #36D88A;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 0px 10px 0px;
+}
+
+.footer-text {
+    margin: 0;
+}

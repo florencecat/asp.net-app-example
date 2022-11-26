@@ -1,0 +1,55 @@
+﻿@model PL.Models.ExtendedReportModel
+
+@{
+    ViewBag.Title = "Менеджеры организации";
+}
+
+<div class="row">
+    <h1>Менеджеры организации</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.DropDownListFor(model => model.OrganizationID, new SelectList(Model.Organizations, "id", "name"), new { })
+        <input type="submit" value="Найти" class="btn btn-default" />
+    }
+</div>
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th>
+                Имя
+            </th>
+            <th>
+                Логин
+            </th>
+            <th>
+                Почта
+            </th>
+            <th>
+                Организация
+            </th>
+        </tr>
+
+        @if (Model.ReportData != null)
+        {
+            foreach (var item in Model.ReportData)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManagerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organization)
+            </td>
+        </tr>
+            }
+        }
+    </table>
+</div>
+
